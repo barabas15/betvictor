@@ -10,6 +10,7 @@
     <version>1.0.0</version>
     <modules>
         <module>Service</module>
+        <module>Receiver</module>
     </modules>
 
     <parent>
