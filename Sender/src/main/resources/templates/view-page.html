@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Comment JMS WebApp</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>Comments</h1>
+<form action="#" th:action="@{/view}" th:object="${comment}" method="post">
+    <p>Comment: <input type="text" th:field="*{text}"/></p>
+    <p><input type="submit" value="Submit"/></p>
+</form>
+<ul>
+    <th:block th:each="comment : ${comments}">
+        <li th:utext="${comment.text}"></li>
+    </th:block>
+</ul>
+</body>
+</html>
